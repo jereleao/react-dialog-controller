@@ -1,0 +1,12 @@
+CONTRIBUTING.md
+.eslintrc.cjs
+yarn.lock
+.idea/*
+.github/*
+coverage
+docs
+src
+scripts
+specs
+_book
+examples
