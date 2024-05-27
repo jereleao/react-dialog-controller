@@ -1,7 +1,5 @@
 # Requires python3 to work since, python 3< does not implement %z.
-
 import sys
-
 
 from datetime import datetime
 from subprocess import Popen, PIPE

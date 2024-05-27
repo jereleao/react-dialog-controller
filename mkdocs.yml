@@ -1,0 +1,10 @@
+site_name: react-dialog-controller documentation
+site_dir: _book
+nav:
+  - Overview: index.md
+  - Examples:
+      - Simple: examples/index.md
+theme:
+  name: 'material'
+markdown_extensions:
+  - codehilite
