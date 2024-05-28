@@ -37,7 +37,7 @@ def log_entry(entry):
 
 
 def get_tags_date(tag):
-    args = [tag, "-1", '--format="%ad"']
+    args = [tag, "-1", "--format=\"%ad\""]
     date_time = git_log(args).split('\n')[0]
 
     if date_time != '':
@@ -90,7 +90,7 @@ def adjacents(ls, f, res):
 
 
 def to_version(tag):
-    if not tag:
+    if not tag or isinstance(tag, str):
         return "HEAD"
     if tag.prerelease:
         return str(tag)
@@ -100,12 +100,12 @@ def to_version(tag):
 def logs_between(base, b):
     to = to_version(b)
     between = "{}..{}".format(to_version(base), to)
-    logs = git_log([between, "--format='%h %s'"])
+    logs = git_log([between, "--format=\"%h %s\""])
     return (base, b, logs)
 
 
 def parse_version(version):
-    if version == 'HEAD':
+    if version == "HEAD":
         return version
     if version[0] == 'v':
         version = version[1:]
@@ -115,7 +115,7 @@ def parse_version(version):
 def get_all_tags():
     lines = git_exec(["tag", "-l"])
     versions = map(parse_version, lines.splitlines())
-    return sorted(versions)
+    return sorted(list(versions)) #sorted(versions)
 
 
 def generate_current():
