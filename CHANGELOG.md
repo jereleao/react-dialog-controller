@@ -1,9 +1,7 @@
-0.1.3 - Tue, 28 May 2024 11:35:59 UTC
+0.1.3 - Tue, 28 May 2024 11:38:52 UTC
 -------------------------------------
 
--
-
-
+- [e1303e2](../../commit/e1303e2) correct changelog file and remove docs from makefile
 
 0.1.2 - Mon, 27 May 2024 16:56:14 UTC
 -------------------------------------

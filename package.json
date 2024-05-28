@@ -1,7 +1,7 @@
 {
   "name": "react-dialog-controller",
   "description": "A controller to display and dispose dialog boxes in a React application",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "main": "./lib/index.js",
   "scripts": {
